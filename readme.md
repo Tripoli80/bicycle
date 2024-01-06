@@ -18,7 +18,9 @@ npm i
 npm run dev
 ```
 
-2. dotenv exemple
-.env
+2. .env exemple:
+
+```bash
 URL_DB=mongodb+srv://<name>:<password>@cluster23.xxxx.mongodb.net/<namebase>?retryWrites=true&w=majority
 PORT=3000
+```
