@@ -16,7 +16,7 @@ git clone https://github.com/your-username/bicycle-backend.git
 cd bicycle-backend
 npm i
 npm run dev
-bash```
+```
 
 2. dotenv exemple
 .env
