@@ -2,9 +2,14 @@ import { Bicycle } from "../schemas/bicycle-schema.js";
 import { v4 as uuidv4 } from "uuid";
 
 export const addBicycle = async (bicycle) => {
-  bicycle.id = uuidv4();
+  bicycle.id =
+    bicycle?.id && bicycle?.id.length > 5 ? bicycle.id +"::" +uuidv4() : uuidv4();
   const newBicycle = new Bicycle({ ...bicycle });
   return await newBicycle.save();
+};
+
+export const getBicycles = async () => {
+  return await Bicycle.find();
 };
 
 export const updateBicycles = async (id, fields) => {
@@ -31,5 +36,5 @@ export const getBicyclesStat = async () => {
         return sum + price;
       }, 0) / bicycles.length,
   };
-  return stats 
+  return stats;
 };

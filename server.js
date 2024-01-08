@@ -4,7 +4,7 @@ import app from "./src/app.js";
 
 import * as dotenv from "dotenv";
 dotenv.config();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const MONGODB_URI = process.env.URL_DB;
 
 async function connectToDatabase() {

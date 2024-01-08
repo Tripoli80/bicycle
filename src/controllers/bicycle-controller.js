@@ -4,6 +4,11 @@ export const addBicycle = async (req, res) => {
   return res.status(201).json(newBicycle);
 };
 
+export const getBicycles= async (req, res) => {
+  const bicycles = await Bicycle.getBicycles();
+  return res.status(200).json(bicycles);
+};
+
 export const updateBicyclesStatus = async (req, res) => {
   const { id } = req.params;
   const { status } = req.body;

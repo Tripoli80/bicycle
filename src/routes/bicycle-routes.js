@@ -5,6 +5,8 @@ import * as bicycleController from "../controllers/bicycle-controller.js";
 import { tryWrapper } from "../utils/index.js";
 
 const router = express.Router();
+router.get("/", tryWrapper(bicycleController.getBicycles));
+
 router.post("/", validator.add, tryWrapper(bicycleController.addBicycle));
 router.patch(
   "/:id/status",
