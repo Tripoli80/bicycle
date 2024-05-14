@@ -19,7 +19,7 @@ const apiLimiter = rateLimit({
 
 const app = express();
 // Настройки CORS
-const allowedOrigins = ["http://localhost:3000", "localhost:3000"];
+const allowedOrigins = ['http://bikerent.s3-website.eu-central-1.amazonaws.com', "http://localhost:3000", "localhost:3000"];
 const corsOptions = {
   origin: allowedOrigins,
   credentials: true, // Указывает, что сервер может отправлять куки в ответ на запросы с другого домена
